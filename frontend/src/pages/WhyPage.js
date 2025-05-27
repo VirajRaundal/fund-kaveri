@@ -50,11 +50,13 @@ const WhyPage = () => {
         className="mb-16"
       >
         <div className="relative rounded-2xl overflow-hidden shadow-elegant max-w-3xl mx-auto">
-          <img 
-            src="/images/make-india-self-reliant.jpg" 
-            alt="Make India Self Reliant - Support Kaveri Engine"
-            className="w-full h-auto"
-          />
+          <div className="bg-gradient-to-br from-orange-400 to-orange-600 rounded-lg p-8 text-center min-h-[400px] flex items-center justify-center">
+            <div className="text-white">
+              <div className="text-4xl mb-4">🇮🇳</div>
+              <p className="text-lg font-bold">Make India Self Reliant</p>
+              <p className="text-sm opacity-90">Support Kaveri Engine</p>
+            </div>
+          </div>
           <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent pointer-events-none"></div>
         </div>
       </motion.div>
