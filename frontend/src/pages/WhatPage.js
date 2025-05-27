@@ -40,11 +40,13 @@ const WhatPage = () => {
         className="mb-16"
       >
         <div className="relative rounded-2xl overflow-hidden shadow-elegant max-w-4xl mx-auto">
-          <img 
-            src="/images/kaveri-guide.jpg" 
-            alt="Kaveri Engine Quick Guide for Defence Newbies"
-            className="w-full h-auto"
-          />
+          <div className="bg-gray-100 rounded-lg p-8 text-center min-h-[400px] flex items-center justify-center">
+            <div className="text-gray-500">
+              <div className="text-4xl mb-4">🔧</div>
+              <p className="text-lg font-medium">Kaveri Engine Quick Guide</p>
+              <p className="text-sm">Image will be replaced with your provided content</p>
+            </div>
+          </div>
           <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent pointer-events-none"></div>
         </div>
       </motion.div>
