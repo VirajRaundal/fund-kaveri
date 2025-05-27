@@ -33,30 +33,52 @@ const Navbar = () => {
 
   return (
     <motion.nav
-      initial={{ y: -100 }}
-      animate={{ y: 0 }}
-      transition={{ duration: 0.6, ease: "easeOut" }}
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled
-          ? "glass-effect shadow-elegant"
-          : "bg-transparent"
-      }`}
+      initial={{ y: -100, opacity: 0 }}
+      animate={{ y: 0, opacity: 1 }}
+      transition={{ duration: 0.8, ease: "easeOut" }}
+      className="fixed top-4 left-1/2 transform -translate-x-1/2 z-50"
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16">
-          {/* Logo */}
-          <Link to="/" className="flex items-center space-x-2">
-            <motion.div
-              whileHover={{ scale: 1.05 }}
-              className="text-xl font-bold gradient-text"
+      <motion.div
+        className={`transition-all duration-300 rounded-2xl px-6 py-3 ${
+          scrolled
+            ? "glass-effect shadow-elegant"
+            : "glass-effect shadow-soft"
+        }`}
+        whileHover={{ scale: 1.02 }}
+      >
+        {/* Desktop Navigation */}
+        <div className="hidden md:flex items-center space-x-8">
+          {navItems.map((item) => (
+            <Link
+              key={item.path}
+              to={item.path}
+              className="relative group"
             >
-              Fund Kaveri Engine
-            </motion.div>
-          </Link>
+              <motion.span
+                whileHover={{ y: -1 }}
+                className={`text-sm font-medium transition-colors duration-200 ${
+                  isActive(item.path)
+                    ? "text-gray-900"
+                    : "text-gray-600 hover:text-gray-900"
+                }`}
+              >
+                {item.label}
+              </motion.span>
+              {isActive(item.path) && (
+                <motion.div
+                  layoutId="navbar-indicator"
+                  className="absolute -bottom-1 left-0 right-0 h-0.5 bg-gray-900 rounded-full"
+                  initial={false}
+                />
+              )}
+            </Link>
+          ))}
+        </div>
 
-          {/* Desktop Navigation */}
-          <div className="hidden md:flex space-x-8">
-            {navItems.map((item) => (
+        {/* Mobile Navigation */}
+        <div className="md:hidden flex items-center space-x-4">
+          {!isOpen ? (
+            navItems.map((item) => (
               <Link
                 key={item.path}
                 to={item.path}
@@ -74,27 +96,34 @@ const Navbar = () => {
                 </motion.span>
                 {isActive(item.path) && (
                   <motion.div
-                    layoutId="navbar-indicator"
+                    layoutId="navbar-indicator-mobile"
                     className="absolute -bottom-1 left-0 right-0 h-0.5 bg-gray-900 rounded-full"
                     initial={false}
                   />
                 )}
               </Link>
-            ))}
-          </div>
-
-          {/* Mobile menu button */}
-          <div className="md:hidden">
+            ))
+          ) : (
             <motion.button
               whileTap={{ scale: 0.95 }}
               onClick={() => setIsOpen(!isOpen)}
               className="inline-flex items-center justify-center p-2 rounded-md text-gray-700 hover:text-gray-900 focus:outline-none"
             >
-              {isOpen ? <HiX size={24} /> : <HiMenu size={24} />}
+              <HiX size={20} />
             </motion.button>
-          </div>
+          )}
+          
+          {!isOpen && (
+            <motion.button
+              whileTap={{ scale: 0.95 }}
+              onClick={() => setIsOpen(!isOpen)}
+              className="inline-flex items-center justify-center p-2 rounded-md text-gray-700 hover:text-gray-900 focus:outline-none md:hidden"
+            >
+              <HiMenu size={20} />
+            </motion.button>
+          )}
         </div>
-      </div>
+      </motion.div>
 
       {/* Mobile Navigation */}
       <AnimatePresence>
