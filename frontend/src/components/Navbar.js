@@ -36,7 +36,7 @@ const Navbar = () => {
       initial={{ y: -100, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.8, ease: "easeOut" }}
-      className="fixed top-4 left-1/2 transform -translate-x-1/2 z-50"
+      className="fixed top-4 left-0 right-0 z-50 flex justify-center"
     >
       <motion.div
         className={`transition-all duration-300 rounded-2xl px-6 py-3 ${
