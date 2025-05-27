@@ -125,34 +125,6 @@ const Navbar = () => {
         </div>
       </motion.div>
 
-      {/* Mobile Navigation */}
-      <AnimatePresence>
-        {isOpen && (
-          <motion.div
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: "auto" }}
-            exit={{ opacity: 0, height: 0 }}
-            className="md:hidden glass-effect border-t border-gray-200"
-          >
-            <div className="px-4 pt-2 pb-3 space-y-1">
-              {navItems.map((item) => (
-                <Link
-                  key={item.path}
-                  to={item.path}
-                  onClick={() => setIsOpen(false)}
-                  className={`block px-3 py-2 rounded-md text-base font-medium transition-colors duration-200 ${
-                    isActive(item.path)
-                      ? "text-gray-900 bg-gray-50"
-                      : "text-gray-600 hover:text-gray-900 hover:bg-gray-50"
-                  }`}
-                >
-                  {item.label}
-                </Link>
-              ))}
-            </div>
-          </motion.div>
-        )}
-      </AnimatePresence>
     </motion.nav>
   );
 };
