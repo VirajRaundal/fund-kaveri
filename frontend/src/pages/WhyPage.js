@@ -29,7 +29,6 @@ const WhyPage = () => {
       icon: "⚙️"
     },
     {
-      number: "05",
       title: "Long-term Cost Efficiency",
       description: "While initial development is expensive, indigenous production reduces per-unit costs over the engine's lifecycle, eliminates markup from foreign vendors, and provides complete control over spare parts and servicing.",
       icon: "📈"
@@ -39,7 +38,7 @@ const WhyPage = () => {
   return (
     <PageLayout 
       title="Why India MUST Build Its Own Jet Engine"
-      subtitle="There are many reasons why India MUST build its own Jet Engine but here are the top 5:"
+      subtitle="There are many reasons why India MUST build a Jet Engine but here are the top 5:"
       className="section-gradient"
     >
       {/* Hero Image Section */}
@@ -49,11 +48,13 @@ const WhyPage = () => {
         transition={{ duration: 0.8, delay: 0.2 }}
         className="mb-16"
       >
-        <div className="relative rounded-2xl overflow-hidden shadow-elegant max-w-3xl mx-auto">
-          <div className="bg-gradient-to-br from-orange-400 to-orange-600 rounded-lg p-8 text-center min-h-[400px] flex items-center justify-center">
+        <div className="relative rounded-2xl overflow-hidden shadow-elegant max-w-3xl mx-auto w-fit">
+        <div className="bg-gradient-to-br from-orange-500 to-red-600 rounded-lg p-4 md:p-6 text-center w-fit mx-auto">
             <div className="text-white">
-              <div className="text-4xl mb-4">🇮🇳</div>
-              <img src="frontend/public/images/make-india-self-reliant.jpg"></img>
+            <img 
+              src="/images/make-india-self-reliant.jpg" 
+              alt="Make India self-reliant" 
+              className="w-full h-auto rounded-lg sm:w-auto sm:max-w-sm mx-auto" />
             </div>
           </div>
           <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent pointer-events-none"></div>
@@ -72,10 +73,6 @@ const WhyPage = () => {
           >
             <div className="bg-white rounded-2xl p-8 shadow-soft hover:shadow-elegant transition-all duration-300 border border-gray-100">
               <div className="flex items-start space-x-6">
-                <div className="flex-shrink-0">
-                  <div className="flex items-center justify-center w-16 h-16 bg-gray-900 text-white rounded-xl font-bold text-lg group-hover:bg-gray-800 transition-colors">
-                    {reason.number}
-                  </div>
                 </div>
                 <div className="flex-1">
                   <div className="flex items-center space-x-3 mb-4">
@@ -89,7 +86,6 @@ const WhyPage = () => {
                   </p>
                 </div>
               </div>
-            </div>
           </motion.div>
         ))}
       </div>

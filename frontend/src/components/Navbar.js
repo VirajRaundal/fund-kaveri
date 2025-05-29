@@ -47,7 +47,7 @@ const Navbar = () => {
         whileHover={{ scale: 1.02 }}
       >
         {/* Desktop Navigation */}
-        <div className="hidden md:flex items-center space-x-8">
+        <div className="flex items-center space-x-8">
           {navItems.map((item) => (
             <Link
               key={item.path}
@@ -75,7 +75,7 @@ const Navbar = () => {
           ))}
         </div>
 
-        {/* Mobile Navigation */}
+        {/* Mobile Navigation
         <div className="md:hidden flex items-center space-x-4">
           {!isOpen ? (
             navItems.map((item) => (
@@ -122,7 +122,7 @@ const Navbar = () => {
               <HiMenu size={20} />
             </motion.button>
           )}
-        </div>
+        </div> */}
       </motion.div>
 
     </motion.nav>

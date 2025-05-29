@@ -39,12 +39,9 @@ const WhatPage = () => {
         transition={{ duration: 0.8, delay: 0.2 }}
         className="mb-16"
       >
-        <div className="relative rounded-2xl overflow-hidden shadow-elegant max-w-4xl mx-auto">
-          <div className="bg-gray-100 rounded-lg p-8 text-center min-h-[400px] flex items-center justify-center">
-            <div className="text-gray-500">
-              <div className="text-4xl mb-4">🔧</div>
-              <img src="frontend/public/images/kaveri-guide.jpeg"></img>
-            </div>
+        <div className="relative rounded-2xl overflow-hidden shadow-elegant max-w-4xl mx-auto w-fit">
+        <div className="bg-gradient-to-br from-orange-500 to-red-600 rounded-lg p-4 md:p-6 text-center w-fit mx-auto">
+              <img src="/images/kaveri-guide.jpg" />
           </div>
           <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent pointer-events-none"></div>
         </div>

@@ -70,11 +70,13 @@ const ContributePage = () => {
         transition={{ duration: 0.8, delay: 0.2 }}
         className="mb-16"
       >
-        <div className="relative rounded-2xl overflow-hidden shadow-elegant max-w-3xl mx-auto">
-          <div className="bg-gradient-to-br from-orange-500 to-red-600 rounded-lg p-8 text-center min-h-[400px] flex items-center justify-center">
+        <div className="relative rounded-2xl overflow-hidden shadow-elegant max-w-3xl mx-auto w-fit">
+        <div className="bg-gradient-to-br from-orange-500 to-red-600 rounded-lg p-4 md:p-6 text-center w-fit mx-auto">
             <div className="text-white">
-              <div className="text-4xl mb-4">✈️</div>
-              <img src="frontend/public/images/indian-jet-engine-programme.jpg" alt="Kaveri Engine Contribution" className="w-full h-auto rounded-lg" />
+            <img 
+              src="/images/indian-jet-engine-programme.jpg" 
+              alt="Kaveri Engine Contribution" 
+              className="w-full h-auto rounded-lg sm:w-auto sm:max-w-sm mx-auto" />
             </div>
           </div>
           <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent pointer-events-none"></div>
@@ -95,7 +97,7 @@ const ContributePage = () => {
               {/* Background gradient effect */}
               <div className={`absolute top-0 left-0 right-0 h-1 bg-gradient-to-r ${method.gradient}`}></div>
               
-              <div className="text-center">
+              <div className="text-center flex flex-col h-full">
                 <div className={`inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r ${method.gradient} text-white rounded-xl mb-6 group-hover:scale-110 transition-transform duration-300`}>
                   {method.icon}
                 </div>
@@ -118,7 +120,7 @@ const ContributePage = () => {
                       handleEmailTemplate(method.actionType);
                     }
                   }}
-                  className={`w-full px-6 py-3 bg-gradient-to-r ${method.gradient} text-white rounded-xl font-semibold hover:shadow-lg transition-all duration-300 flex items-center justify-center space-x-2`}
+                  className={`mt-auto w-full px-6 py-3 bg-gradient-to-r ${method.gradient} text-white rounded-xl font-semibold hover:shadow-lg transition-all duration-300 flex items-center justify-center space-x-2`}
                 >
                   <span>{method.action}</span>
                   {method.link && <FaExternalLinkAlt className="w-4 h-4" />}
