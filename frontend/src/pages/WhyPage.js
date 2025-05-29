@@ -53,8 +53,7 @@ const WhyPage = () => {
           <div className="bg-gradient-to-br from-orange-400 to-orange-600 rounded-lg p-8 text-center min-h-[400px] flex items-center justify-center">
             <div className="text-white">
               <div className="text-4xl mb-4">🇮🇳</div>
-              <p className="text-lg font-bold">Make India Self Reliant</p>
-              <p className="text-sm opacity-90">Support Kaveri Engine</p>
+              <img src="frontend/public/images/make-india-self-reliant.jpg"></img>
             </div>
           </div>
           <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent pointer-events-none"></div>

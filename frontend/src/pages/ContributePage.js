@@ -19,7 +19,7 @@ const ContributePage = () => {
       description: "You can also send the following e-mail to the Ministry of Defence and Ministry of Finance:",
       action: "Email Template",
       actionType: "email-gov",
-      link: "#", // Placeholder link
+      link: "https://docs.google.com/document/d/1eCQdFvj0WfKd5Fcn-eWMwFt4tE2WsGOtA8NhmBUje8U/edit?usp=sharing", // Placeholder link
       gradient: "from-green-500 to-green-600"
     },
     {
@@ -28,7 +28,7 @@ const ContributePage = () => {
       description: "You can also send the following e-mail to your local MP/MLA:",
       action: "Email Template",
       actionType: "email-rep", 
-      link: "#", // Placeholder link
+      link: "https://docs.google.com/document/d/1l9h6o0H8nLAJ5VF2CDi2kMRMw50_rlUTUzOLgEor9jQ/edit?usp=sharing", // Placeholder link
       gradient: "from-purple-500 to-purple-600"
     }
   ];
@@ -51,9 +51,9 @@ const ContributePage = () => {
 
   const handleEmailTemplate = (type) => {
     if (type === "email-gov") {
-      window.open("#", "_blank"); // Placeholder for Google Doc link
+      window.open("https://docs.google.com/document/d/1eCQdFvj0WfKd5Fcn-eWMwFt4tE2WsGOtA8NhmBUje8U/edit?usp=sharing", "_blank"); // Placeholder for Google Doc link
     } else if (type === "email-rep") {
-      window.open("#", "_blank"); // Placeholder for Google Doc link  
+      window.open("https://docs.google.com/document/d/1l9h6o0H8nLAJ5VF2CDi2kMRMw50_rlUTUzOLgEor9jQ/edit?usp=sharing", "_blank"); // Placeholder for Google Doc link  
     }
   };
 
@@ -74,8 +74,7 @@ const ContributePage = () => {
           <div className="bg-gradient-to-br from-orange-500 to-red-600 rounded-lg p-8 text-center min-h-[400px] flex items-center justify-center">
             <div className="text-white">
               <div className="text-4xl mb-4">✈️</div>
-              <p className="text-lg font-bold">Indian Jet Engine Programme</p>
-              <p className="text-sm opacity-90">Building the Future of Defense</p>
+              <img src="frontend/public/images/indian-jet-engine-programme.jpg" alt="Kaveri Engine Contribution" className="w-full h-auto rounded-lg" />
             </div>
           </div>
           <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent pointer-events-none"></div>
@@ -149,13 +148,13 @@ const ContributePage = () => {
               #FundKaveriEngine
             </span>
             <span className="px-4 py-2 bg-gray-100 text-gray-700 rounded-full text-sm font-medium">
-              #MakeInIndia
+              #KaveriForBharat
             </span>
             <span className="px-4 py-2 bg-gray-100 text-gray-700 rounded-full text-sm font-medium">
               #AtmanirbharBharat
             </span>
             <span className="px-4 py-2 bg-gray-100 text-gray-700 rounded-full text-sm font-medium">
-              #DefenseIndependence
+              #MakeInIndia
             </span>
           </div>
         </div>
