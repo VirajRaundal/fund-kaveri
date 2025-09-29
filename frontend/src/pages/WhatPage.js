@@ -41,8 +41,8 @@ const WhatPage = () => {
       >
         <div className="relative rounded-2xl overflow-hidden shadow-elegant max-w-4xl mx-auto w-fit">
         <div className="bg-gradient-to-br from-orange-500 to-red-600 rounded-lg p-4 md:p-6 text-center w-fit mx-auto">
-              <img src="/images/Kaveri-generated.jpg" />
-          </div>
+          <img src="/images/Kaveri-generated.jpg" className="w-4/5 mx-auto" />
+        </div>
           <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent pointer-events-none"></div>
         </div>
       </motion.div>
