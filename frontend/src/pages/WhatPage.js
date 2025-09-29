@@ -39,7 +39,7 @@ const WhatPage = () => {
         transition={{ duration: 0.8, delay: 0.2 }}
         className="mb-16"
       >
-        <div className="relative rounded-2xl overflow-hidden shadow-elegant max-w-4xl mx-auto w-fit">
+        <div className="relative rounded-2xl overflow-hidden shadow-elegant max-w-4xl mx-auto">
         <div className="bg-gradient-to-br from-orange-500 to-red-600 rounded-lg p-4 md:p-6 text-center mx-auto">
           <img src="/images/Kaveri-generated.jpg" className="w-4/5 mx-auto" />
         </div>
